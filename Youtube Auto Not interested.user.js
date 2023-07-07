@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  Auto click "Not interested" button if video title/uploader contains blacklisted word
 // @author       harry
-// @match        https://www.youtube.com/
+// @match        https://www.youtube.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=youtube.com
 // @grant        none
 // ==/UserScript==
@@ -52,6 +52,7 @@
     }
 
     setInterval(()=>{
+        if (window.location.href!="https://www.youtube.com/"){return}
         let Nodes = document.querySelectorAll("#video-title, #channel-name");
         let timeout=0
         Nodes.forEach((node)=>{
