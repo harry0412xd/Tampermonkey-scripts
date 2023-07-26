@@ -45,7 +45,7 @@
                 querySelectorIncludesText("yt-formatted-string", notInterestText[Lang]).click();
                 prevent_dup_func();
             }catch(e){//not sure if this work
-                let ytfs = querySelectorAll("yt-formatted-string");
+                let ytfs = document.querySelectorAll("yt-formatted-string");
                 ytfs[ytfs.length-3].click();
             }
         }, 50);
